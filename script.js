@@ -1,6 +1,6 @@
 function getComputerChoice() {
-  const NUMERO_SORTEADO = Math.floor(Math.random() * 3);
-  switch (NUMERO_SORTEADO) {
+  const sortedNumber = Math.floor(Math.random() * 3);
+  switch (sortedNumber) {
     case 0:
       return "rock";
     case 1:
@@ -10,4 +10,12 @@ function getComputerChoice() {
   }
 }
 
+function getHumanChoice() {
+  const humanChoice = prompt(
+    "Choose an option between: Rock, Paper or Scissors",
+  );
+  return humanChoice;
+}
+
 console.log(getComputerChoice());
+console.log(getHumanChoice());
