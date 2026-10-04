@@ -40,13 +40,59 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
+function playGame() {
+  humanChoice = getHumanChoice();
+  computerChoice = getComputerChoice();
+  playRound(humanChoice, computerChoice);
+  console.log(humanChoice);
+  console.log(computerChoice);
+  console.log(humanScore);
+  console.log(computerScore);
+
+  humanChoice = getHumanChoice();
+  computerChoice = getComputerChoice();
+  playRound(humanChoice, computerChoice);
+  console.log(humanChoice);
+  console.log(computerChoice);
+  console.log(humanScore);
+  console.log(computerScore);
+
+  humanChoice = getHumanChoice();
+  computerChoice = getComputerChoice();
+  playRound(humanChoice, computerChoice);
+  console.log(humanChoice);
+  console.log(computerChoice);
+  console.log(humanScore);
+  console.log(computerScore);
+
+  humanChoice = getHumanChoice();
+  computerChoice = getComputerChoice();
+  playRound(humanChoice, computerChoice);
+  console.log(humanChoice);
+  console.log(computerChoice);
+  console.log(humanScore);
+  console.log(computerScore);
+
+  humanChoice = getHumanChoice();
+  computerChoice = getComputerChoice();
+  playRound(humanChoice, computerChoice);
+  console.log(humanChoice);
+  console.log(computerChoice);
+  console.log(humanScore);
+  console.log(computerScore);
+
+  if (humanScore > computerScore) {
+    console.log("You won the game!!!!!, Congratulations!!!!!!");
+  } else if (humanScore == computerScore) {
+    console.log("You draw the game!, try again!");
+  } else {
+    console.log("You lost the game!, i'm sorry, but feel free to try again!");
+  }
+}
+
 let humanScore = 0;
 let computerScore = 0;
+let humanChoice;
+let computerChoice;
 
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
-console.log(computerChoice);
-
-playRound(humanChoice, computerChoice);
-console.log(humanScore);
-console.log(computerScore);
+playGame();
