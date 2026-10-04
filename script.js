@@ -16,11 +16,11 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let humanChoice = prompt(
-    "Choose an option between: Rock, Paper or Scissors",
-  );
+  let humanChoice = prompt("Choose an option between: Rock, Paper or Scissors").toLowerCase();
   return humanChoice;
 }
+
+function playRound(humanScore, computerScore) {}
 
 let humanScore = 0;
 let computerScore = 0;
