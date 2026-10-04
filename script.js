@@ -1,21 +1,29 @@
 function getComputerChoice() {
+  let computerChoice;
   const sortedNumber = Math.floor(Math.random() * 3);
   switch (sortedNumber) {
     case 0:
-      return "rock";
+      computerChoice = "rock";
+      break;
     case 1:
-      return "paper";
+      computerChoice = "paper";
+      break;
     case 2:
-      return "scissors";
+      computerChoice = "scissors";
+      break;
   }
+  return computerChoice;
 }
 
 function getHumanChoice() {
-  const humanChoice = prompt(
+  let humanChoice = prompt(
     "Choose an option between: Rock, Paper or Scissors",
   );
   return humanChoice;
 }
+
+let humanScore = 0;
+let computerScore = 0;
 
 console.log(getComputerChoice());
 console.log(getHumanChoice());
