@@ -42,6 +42,14 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
-rock.addEventListener("click", playRound("rock", getComputerChoice()));
-paper.addEventListener("click", playRound("paper", getComputerChoice()));
-scissors.addEventListener("click", playRound("scissors", getComputerChoice()));
+rock.addEventListener("click", () => {
+  playRound("rock", getComputerChoice());
+});
+
+paper.addEventListener("click", () => {
+  playRound("paper", getComputerChoice());
+});
+
+scissors.addEventListener("click", () => {
+  playRound("scissors", getComputerChoice());
+});
