@@ -15,13 +15,6 @@ function getComputerChoice() {
   return computerChoice;
 }
 
-function getHumanChoice() {
-  let humanChoice = prompt(
-    "Choose an option between: Rock, Paper or Scissors",
-  ).toLowerCase();
-  return humanChoice;
-}
-
 function playRound(humanChoice, computerChoice) {
   if (humanChoice == "rock" && computerChoice == "scissors") {
     humanScore++;
@@ -49,6 +42,6 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
-rock.addEventListener("click", playRound());
-paper.addEventListener("click", playRound());
-scissors.addEventListener("click", playRound());
+rock.addEventListener("click", playRound("rock", getComputerChoice()));
+paper.addEventListener("click", playRound("paper", getComputerChoice()));
+scissors.addEventListener("click", playRound("scissors", getComputerChoice()));
