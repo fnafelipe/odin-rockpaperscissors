@@ -31,6 +31,8 @@ function playRound(humanChoice, computerChoice) {
     computerScore++;
     console.log("You lost!, try again next round.");
   }
+  humanScoreOut.textContent = `Human: ${humanScore}`;
+  computerScoreOut.textContent = `Computer: ${computerScore}`;
 }
 
 let humanScore = 0;
@@ -53,3 +55,9 @@ paper.addEventListener("click", () => {
 scissors.addEventListener("click", () => {
   playRound("scissors", getComputerChoice());
 });
+
+const humanScoreOut = document.getElementById("human-score");
+const computerScoreOut = document.getElementById("computer-score");
+
+humanScoreOut.textContent = humanScore;
+computerScoreOut.textContent = computerScore;
