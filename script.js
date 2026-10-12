@@ -58,6 +58,3 @@ scissors.addEventListener("click", () => {
 
 const humanScoreOut = document.getElementById("human-score");
 const computerScoreOut = document.getElementById("computer-score");
-
-humanScoreOut.textContent = humanScore;
-computerScoreOut.textContent = computerScore;
