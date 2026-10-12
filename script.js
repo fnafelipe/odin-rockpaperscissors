@@ -18,21 +18,33 @@ function getComputerChoice() {
 function playRound(humanChoice, computerChoice) {
   if (humanChoice == "rock" && computerChoice == "scissors") {
     humanScore++;
-    console.log("You won!, Rock beats Scissors.");
+    roundWinner.textContent = "You won!, Rock beats Scissors.";
   } else if (humanChoice == "scissors" && computerChoice == "paper") {
     humanScore++;
-    console.log("You won!, Scissors beats Paper.");
+    roundWinner.textContent = "You won!, Scissors beats Paper.";
   } else if (humanChoice == "paper" && computerChoice == "rock") {
     humanScore++;
-    console.log("You won!, Paper beats Rock.");
+    roundWinner.textContent = "You won!, Paper beats Rock.";
   } else if (humanChoice == computerChoice) {
-    console.log("You draw!, try picking a diferent one next round.");
+    roundWinner.textContent =
+      "You draw!, try picking a diferent one next round.";
   } else {
     computerScore++;
-    console.log("You lost!, try again next round.");
+    roundWinner.textContent = "You lost!, try again next round.";
   }
+
   humanScoreOut.textContent = `Human: ${humanScore}`;
   computerScoreOut.textContent = `Computer: ${computerScore}`;
+
+  if (humanScore === 5) {
+    console.log("You won the game!");
+    humanScore = 0;
+    computerScore = 0;
+  } else if (computerScore === 5) {
+    console.log("You lost the game!");
+    humanScore = 0;
+    computerScore = 0;
+  }
 }
 
 let humanScore = 0;
@@ -58,3 +70,5 @@ scissors.addEventListener("click", () => {
 
 const humanScoreOut = document.getElementById("human-score");
 const computerScoreOut = document.getElementById("computer-score");
+const roundWinner = document.getElementById("round-winner");
+const gameWinner = document.getElementById("game-winner");
