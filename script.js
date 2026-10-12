@@ -37,11 +37,11 @@ function playRound(humanChoice, computerChoice) {
   computerScoreOut.textContent = `Computer: ${computerScore}`;
 
   if (humanScore === 5) {
-    console.log("You won the game!");
+    gameWinner.textContent = "You won the game!";
     humanScore = 0;
     computerScore = 0;
   } else if (computerScore === 5) {
-    console.log("You lost the game!");
+    gameWinner.textContent = "You lost the game!";
     humanScore = 0;
     computerScore = 0;
   }
